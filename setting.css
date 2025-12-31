@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+}
+
+/* Header */
+.header {
+    background: #1e57a1;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.header p {
+    margin: 5px 0 0;
+    font-size: 18px;
+}
+
+/* Main Box */
+.settings-container {
+    width: 80%;
+    background: white;
+    margin: 25px auto;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* User Profile */
+.user-section {
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-icon {
+    width: 80px;
+}
+
+.edit-btn {
+    background: #1e57a1;
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Each setting option */
+.setting-item {
+    background: #f7f9fb;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    font-size: 18px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Label for inputs */
+.setting-item label {
+    display: block;
+    margin-bottom: 6px;
+    color: #1e57a1;
+    font-size: 18px;
+}
+
+/* Input fields */
+.setting-item input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+}
+
+/* Change Password Button */
+.password-btn {
+    width: 100%;
+    padding: 12px;
+    background: #1e57a1;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.password-btn:hover {
+    background: #164782;
+}
+

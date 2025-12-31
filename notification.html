@@ -1,0 +1,114 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications - Share & Care</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fef9f5;
+        }
+
+        /* Header */
+        .header {
+            background: #ff4f4f;
+            padding: 18px;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+
+        /* Container */
+        .container {
+            width: 90%;
+            margin: auto;
+            margin-top: 20px;
+        }
+
+        /* Notification Card */
+        .card {
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+        }
+
+        .icon {
+            font-size: 38px;
+            width: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .sub {
+            color: gray;
+            font-size: 14px;
+            margin-top: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">Notifications</div>
+
+    <div class="container">
+
+        <div class="card">
+            <div class="icon">🍲</div>
+            <div>
+                <div class="title">New Food Donation Received</div>
+                <div class="sub">ABC Hotel • 12:30 PM</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="icon">📦</div>
+            <div>
+                <div class="title">Pickup Required</div>
+                <div class="sub">Royal Restaurant • 5:00 PM</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="icon">👕</div>
+            <div>
+                <div class="title">New Clothes Donation</div>
+                <div class="sub">Mr. Rahul • 10:00 AM</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="icon">❤</div>
+            <div>
+                <div class="title">Food Distribution Event Tomorrow</div>
+                <div class="sub">Community Hall • 10:00 AM</div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

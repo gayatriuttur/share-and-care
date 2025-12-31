@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up</title>
+<link rel="stylesheet" href="signup.css">
+</head>
+<body>
+
+<div class="card">
+
+    <img src="images/donate.jpg" alt="profile" width="100" height="100" class="logo" />
+
+    <h2>SHARE AND CARE</h2>
+    <p class="subtitle">Share Food, Spread Smiles</p>
+
+    <form id="signupForm" action="signup.php" method="POST">
+
+        <input type="text" name="name" id="name" placeholder="Full Name" required>
+        <input type="email" name="email" id="email" placeholder="Email" required>
+        <input type="tel" name="phone" id="phone" placeholder="Phone Number" required>
+
+        <!-- PASSWORD FIELD -->
+        <div class="password-box">
+            <input type="password" name="password" id="pass" placeholder="Password" required>
+            <span class="toggle" onclick="togglePass('pass')">👁</span>
+        </div>
+
+        <div class="password-box">
+            <input type="password" name="cpassword" id="cpass" placeholder="Confirm Password" required>
+            <span class="toggle" onclick="togglePass('cpass')">👁</span>
+        </div>
+
+        <!-- Just a submit button, no <a> tag inside -->
+        <button type="submit">Create Account</button>
+
+    </form>
+
+    <p class="login-text">
+        Already have an account? <a href="login.html">Sign in</a>
+    </p>
+
+</div>
+
+<script>
+    // Show/Hide Password
+    function togglePass(id) {
+        let field = document.getElementById(id);
+        field.type = field.type === "password" ? "text" : "password";
+    }
+
+    // Form Validation
+    document.getElementById("signupForm").addEventListener("submit", function(event) {
+        let name = document.getElementById("name").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let phone = document.getElementById("phone").value.trim();
+        let pass = document.getElementById("pass").value.trim();
+        let cpass = document.getElementById("cpass").value.trim();
+
+        if (!name || !email || !phone || !pass || !cpass) {
+            alert("Please fill all fields.");
+            event.preventDefault(); // stop submission
+            return;
+        }
+
+        if (pass !== cpass) {
+            alert("Passwords do not match!");
+            event.preventDefault();
+            return;
+        }
+
+        // Password Rules
+        let capitalLetter = /[A-Z]/;
+        let symbol = /[@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
+
+        if (pass.length < 8) {
+            alert("Password must be at least 8 characters long.");
+            event.preventDefault();
+            return;
+        }
+
+        if (!capitalLetter.test(pass)) {
+            alert("Password must contain at least one capital letter (A–Z).");
+            event.preventDefault();
+            return;
+        }
+
+        if (!symbol.test(pass)) {
+            alert("Password must contain at least one special symbol.");
+            event.preventDefault();
+            return;
+        }
+
+        // All validations passed → let the form submit to signup.php
+        // No need for alert("validation success!") if you want PHP to handle redirection
+    });
+</script>
+
+</body>
+</html>

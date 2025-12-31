@@ -1,0 +1,69 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f6f3;
+}
+
+/* Header */
+.header {
+    background: #ff4d4d;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+/* Main Container */
+.container {
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+/* Notification Card */
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 18px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: 0.2s ease;
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: scale(1.02);
+}
+
+/* Icon styling */
+.icon {
+    font-size: 35px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Title */
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Subtitle */
+.time {
+    color: #666;
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+

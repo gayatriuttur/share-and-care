@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #f0f2f5; /* same grey background as your login */
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    width: 90%;
+    max-width: 380px;
+    margin: 60px auto;
+    background: white;
+    padding: 30px 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+
+
+h2 {
+    margin: 10px 0 5px;
+    color: #2a4d1c; /* same dark green as your login text */
+}
+
+.subtitle {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+/*PASSWORD BOX*/
+.password-box {
+    position:relative;
+    width:90%;
+}
+.password-box input{
+    width:100%;
+    padding-right:40px;
+}
+
+.password-box .toggle{
+    position:absolute;
+    right:12px;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:18px;
+    cursor:pointer;
+    user-select:none;
+}
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: #1c7c0f; /* same green button */
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #16660c;
+}
+
+.login-text {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login-text a {
+    color: #1c7c0f;
+    text-decoration: none;
+    font-weight: bold;
+}

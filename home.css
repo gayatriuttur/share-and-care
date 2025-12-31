@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #fff7e6; 
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    padding: 15px;
+}
+
+/* Gradient top section */
+.top-box {
+    background: linear-gradient(180deg, #ffb85c, #ff8734);
+    padding: 35px 20px;
+    border-radius: 25px;
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
+
+.top-box h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.top-box p {
+    margin: 8px 0 15px;
+    font-size: 16px;
+}
+
+.donate-btn {
+    background: #ffeb99;
+    color: #d46b00;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 25px;
+    font-size: 17px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Grid for photos */
+.photo-grid {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.photo-box {
+    background: #fff3d9;
+    border: 2px solid #ffb85c;
+    border-radius: 18px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    color: #d46b00;
+    text-align: center;
+}
+
+/* Bottom navigation */
+.bottom-nav {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    padding:15px;
+}
+.nav-item{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background-color:#ffe9c4;/* Light circular background*/
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow: 0 4px 7px rgba(0,0,0,0.2)
+}
+.nav-item img {
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    object-fit:cover;
+}
+

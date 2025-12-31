@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share & Care - Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+
+            <form action="login.php"method="POST" onsubmit="validateLogin(event)">
+
+                <img src="images/donate.jpg" class="logo">
+
+                <h2>SHARE AND CARE</h2>
+                <p class="subtitle">Share Food, Spread Smiles</p>
+
+                <input type="text" id="loginUser" name="user" placeholder="Email / Phone number">
+
+                <!-- ✅ Correct Password Box with Eye Icon -->
+                <div class="password-box">
+                    <input type="password" id="loginPass" name="password" placeholder="Password">
+                    <span class="togglePassword" onclick="showPassword()">👁</span>
+                </div>
+
+                <button type="submit" class="signin">Sign In</button>
+
+                <a href="#" class="forgot">Forgot Password?</a>
+
+                <div class="line">or continue with</div>
+
+                <div class="social">
+                    <button type="button" class="google">G</button>
+                    <button type="button" class="facebook">f</button>
+                </div>
+
+                <p class="signup">New here?
+                    <a href="sign up.html">Create an account</a>
+                </p>
+
+            </form>
+
+        </div>
+    </div>
+
+    <script>
+    function validateLogin(event) {
+        event.preventDefault();
+
+        let user = document.getElementById("loginUser").value.trim();
+        let pass = document.getElementById("loginPass").value.trim();
+
+        if (user === "" || pass === "") {
+            alert("Please enter Email/Phone and Password.");
+            return;
+        }
+          let capitalLetter = /[A-Z]/;
+        let symbol = /[@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
+
+        if (pass.length < 8) {
+            alert("Password must be at least 8 characters long.");
+            return;
+        }
+
+        if (!capitalLetter.test(pass)) {
+            alert("Password must contain at least one capital letter (A–Z).");
+            return;
+        }
+
+        if (!symbol.test(pass)) {
+            alert("Password must contain at least one symbol.");
+            return;
+        }
+
+        // All good → redirect to home
+        window.location.href = "home.html";
+    }
+
+    // Show/Hide password
+    function showPassword() {
+        let passField = document.getElementById("loginPass");
+        passField.type = (passField.type === "password") ? "text" : "password";
+    }
+    </script>
+
+</body>
+</html>
